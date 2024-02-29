@@ -7,8 +7,11 @@ class Solution {
             return;
         }
 
-        System.arraycopy(nums2, 0, nums1, m, n);
-
+        
+        for(int i = m, j = 0; i < nums1.length; i++, j++){
+            nums1[i] = nums2[j];
+        }
+        
         Arrays.sort(nums1);
 
         System.out.println(Arrays.toString(nums1));
