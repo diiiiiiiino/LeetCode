@@ -5,18 +5,16 @@ class Solution {
         Stack<Integer> stk = new Stack<>();
         Queue<Integer> queue = new LinkedList<>();
         
+        int num = 0;
+        int originX = x;
         while(x > 0){
             int rest = x % 10;
+            num = (num * 10) + rest;
             x = x / 10;
-
-            stk.push(rest);
-            queue.add(rest);
         }
 
-        while(!stk.isEmpty() && !queue.isEmpty()){
-            if(stk.pop() != queue.poll()){
-                return false;
-            }
+        if(num != originX){
+            return false;
         }
 
         return true;
