@@ -14,8 +14,9 @@ class RandomizedSet {
             return false;
         }
 
+        int idx = list.size();
         list.add(val);
-        map.put(val, list.size() - 1);
+        map.put(val, idx);
 
         return true;
     }
