@@ -7,8 +7,8 @@ class Solution {
             dy[i] = Math.max(dy[i], nums[i]);
             
             for(int j = i + 2; j < nums.length; j++){
-                dy[j] = Math.max(Math.max(nums[i], dy[i]) + nums[j], dy[j]); 
-                answer = Math.max(dy[j], answer);   
+                dy[j] = Math.max(dy[i] + nums[j], dy[j]); 
+                answer = Math.max(dy[j], answer);
             }
 
             answer = Math.max(answer, dy[i]);
