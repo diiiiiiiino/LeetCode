@@ -1,10 +1,10 @@
 class MinStack {
 
-    static class Data{
+    private static class Data{
         int val;
         int minVal;
 
-        public Data(int val, int minVal){
+        Data(int val, int minVal){
             this.val = val;
             this.minVal = minVal;
         }
