@@ -5,7 +5,14 @@ class Solution {
         int idx = 0;
         int count = 1;
         while(candies >= 0){
-            answer[idx] += Math.min(candies, count);
+            int add = 0;
+            if(candies < count){
+                add = candies;
+            } else {
+                add = count;
+            }
+
+            answer[idx] += add;
 
             candies -= count;
             count++;
